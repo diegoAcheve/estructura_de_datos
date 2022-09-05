@@ -160,4 +160,65 @@ public class Arreglos <E>{
 				l[p]=x;
 				}
 	}
+	/**
+	 * Método que regresa el valor promedio de los números dentro del arreglo 
+	 */
+	public Float promedio() {
+		int suma = 0;
+		for (int i = 0; i < l.length; i++) {
+			suma = suma +  (int)l[i];
+			}
+		return (float) (suma/l.length);
+	}
+	/**
+	 * Método que regresa el valor máximo (más alto) de los números dentro del arreglo 
+	 */
+	public Integer maximo(){
+		int max = 0; int aux = 0;
+		for(int i=0; i<l.length; i++) {
+			aux = (int)l[i];
+			if(aux > max) {
+				max = aux;
+			}
+		}
+		return max;
+	}
+	/**
+	 * Método que regresa el valor mínimo (más pequeño) de los números dentro del arreglo 
+	 */
+	public Integer minimo() {
+		int min = (int)l[0]; int aux = 0;
+		for(int i=0; i<l.length; i++) {
+			aux = (int)l[i];
+			if(aux < min) {
+				min = aux;
+			}
+		}
+		return min;
+	}
+	/**
+	 * Metodo que devuelve los valores del arreglo dentro del intervalo a - b
+	 * @param a Entero con el valor inicial del intervalo, por lo tanto mayor a 0 y menor a 'b'
+	 * @param b Entero con el valor final del intervalo, por lo tanto mayor a 'a' y menor a la longitud del arreglo
+	 * @throws IndiceFueraDeRango Exepción que sucede cuando no estamos en el rango del arreglo
+	 */
+	public void Intervalo(int a, int b) throws IndiceFueraDeRango {
+		if (a<=0 || a>=b || b>l.length) {
+			throw new IndiceFueraDeRango("Indice fuera de rango");
+			} else {
+				for (int i = a; i < b; i++) {
+					System.out.print(l[i]+" ");
+					}
+				System.out.println();
+				}
+	}
+	/**
+	 * Metodo que devuelve el valor medio del arreglo
+	
+	public Integer valormedio() {
+		int medio = 0;
+		
+		
+	}
+	 */
 }

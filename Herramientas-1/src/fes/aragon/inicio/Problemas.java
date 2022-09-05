@@ -14,7 +14,7 @@ public class Problemas {
 		}
 			numeros.imprime();	
 		
-		//La siguiente seccion del código ordena el arreglo de menor a mayor
+		//La siguiente seccion del código regresa el numero mayor
 		int aux = 0;
 		int num_mayor = 0;
 		for(int i = 0; i < numeros.longitud(); i++) {
@@ -24,6 +24,9 @@ public class Problemas {
 			}
 		}
 		System.out.println(num_mayor);
+		System.out.println(numeros.promedio());
+		System.out.println(numeros.maximo());
+		System.out.println(numeros.minimo());
 	}
 }
 
